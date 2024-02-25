@@ -1,10 +1,12 @@
 class Passenger:
-    def __init__(self, name, booking_reference, seat_number):
+    def __init__(self, name, booking_reference, seat_number): # Constructor method for Passenger class
+        # Initialize attributes for passenger's name, booking reference, and seat number
         self.name = name
         self.booking_reference = booking_reference
         self.seat_number = seat_number
-        self.boarding_pass = None
+        self.boarding_pass = None # Initialize boarding_pass to None
 
+    # Getter methods to get passenger details
     def get_name(self):
         return self.name
 
@@ -14,6 +16,7 @@ class Passenger:
     def get_seat_number(self):
         return self.seat_number
 
+    # Setter and getter methods for boarding pass
     def set_boarding_pass(self, boarding_pass):
         self.boarding_pass = boarding_pass
 
@@ -24,34 +27,38 @@ class Passenger:
 
 
 class TicketingAgent:
-    def __init__(self, name):
+    def __init__(self, name): # Constructor method for TicketingAgent class
+        # Initialize attribute for ticketing agent's name
         self.name = name
 
-    def get_name(self):
+    def get_name(self): # Getter method to get ticketing agent's name
         return self.name
 
 
 
 
 class System:
-    def __init__(self):
+    def __init__(self):# Constructor method for class System
+        # Initialize an empty list to store flights
         self.flights = []
 
-    def add_flight(self, flight):
+    def add_flight(self, flight): # Method to add a flight to the system
         self.flights.append(flight)
 
-    def get_flights(self):
+    def get_flights(self): # Method to get all flights in the system
         return self.flights
 
 
 
 
 class Flight:
-    def __init__(self, flight_number, destination, departure_time):
+    def __init__(self, flight_number, destination, departure_time):# Constructor method for Flight class
+        # Initialize attributes for flight number, destination, and departure time
         self.flight_number = flight_number
         self.destination = destination
         self.departure_time = departure_time
 
+    # Getter methods to retrieve flight details
     def get_flight_number(self):
         return self.flight_number
 
@@ -65,11 +72,13 @@ class Flight:
 
 
 class BoardingPass:
-    def __init__(self, passenger, flight, gate):
+    def __init__(self, passenger, flight, gate):# Constructor method for BoardingPass class
+        # Initialize attributes for passenger, flight, and gate
         self.passenger = passenger
         self.flight = flight
         self.gate = gate
 
+    # Getter methods to get boarding pass details
     def get_passenger(self):
         return self.passenger
 
@@ -82,10 +91,10 @@ class BoardingPass:
 
 
 class GateScanner:
-    def __init__(self):
+    def __init__(self): # Constructor method for GateScanner class
         pass
 
-    def scan_boarding_pass(self, boarding_pass):
+    def scan_boarding_pass(self, boarding_pass): # Method to scan a boarding pass
         pass
 
   # creating objects
